@@ -109,9 +109,11 @@ export default {
     },
     handleContentFocus() {
       document.execCommand('defaultParagraphSeparator', false, 'div');
+      this.$emit('focus');
     },
     handleContentBlur() {
       this.selectedRegion = this.getSelectedRegion();
+      this.$emit('blur');
     },
     handleInput() {
       this.emitChanges();
