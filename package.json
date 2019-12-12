@@ -16,6 +16,10 @@
     "lib/",
     "README.md"
   ] ,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddosdor/vue-sh-wysiwyg.git"
+  },  
   "dependencies": {
     "core-js": "^3.4.3",
     "lodash.debounce": "^4.0.8",
