@@ -89,7 +89,7 @@ So far, there are only a few possible commands (Did I mentioned that it's a simp
 - **Bold** (bold)
 - **Italic** (italic)
 - **Strikethrough** (strikeThrough)
-- **Underlin** (Underline)
+- **Underline** (Underline)
 - **Align left** (justifyLeft)
 - **Align center** (justifyCenter)
 - **Align right** (justifyRight)
