@@ -109,7 +109,7 @@ export default {
     },
 
     handleExecCommand(cmd, args) {
-      this.restoreSelectedRegion();
+      if (args) this.restoreSelectedRegion();
       document.execCommand(cmd, false, args || null);
       this.clearSelectedRedion();
       this.$nextTick(this.emitChanges);
@@ -141,7 +141,7 @@ export default {
     display: flex
     border-bottom: 1px solid #d1d1d1
     background: #f8f8f8
-    padding: 6px 8px
+    padding: 2px 8px
     white-space: normal
     line-height: 20px
 </style>

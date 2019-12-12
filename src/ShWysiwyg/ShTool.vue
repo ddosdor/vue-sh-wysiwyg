@@ -2,9 +2,9 @@
   <div v-sh-click-outside="handleClickOutside"
        class="ShTool"
   >
-    <span class="ShTool__action-button"
-          @click="handleClick"
-          v-html="command.icon"
+    <button class="ShTool__action-button"
+            @click="handleClick"
+            v-html="command.icon"
     />
     <component :is="command.utils"
                v-if="shouldShowUtils"
@@ -61,7 +61,7 @@ export default {
 
     &__action-button
       margin: 0
-      padding: 7px 6px 2px 6px
+      padding: 7px 2px 2px 6px
       border: 1px transparent solid
       background: transparent
       text-decoration: none
