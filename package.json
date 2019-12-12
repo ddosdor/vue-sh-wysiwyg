@@ -16,6 +16,13 @@
     "lib/",
     "README.md"
   ] ,
+  "keywords": [
+    "vue",
+    "vue2",
+    "wysiwyg",
+    "html",
+    "editor"
+  ],  
   "repository": {
     "type": "git",
     "url": "https://github.com/ddosdor/vue-sh-wysiwyg.git"
