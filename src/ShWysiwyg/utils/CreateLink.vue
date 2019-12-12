@@ -39,10 +39,6 @@ export default {
 
 <style lang="sass">
   .CreateLink
-    position: absolute
-    top: 40px
-    border: 1px solid #d1d1d1
-    z-index: 1
     display: flex
     padding: 2px
     font-size: 12px

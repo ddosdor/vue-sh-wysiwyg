@@ -1,0 +1,24 @@
+{
+  "directories": {
+    "components": "ShWysiwyg",
+    "unitTests": "__tests__"
+  },
+  "settings": {
+    "rootSrcDirectory": "src",
+    "alwaysCreateSpecFiles": false,
+    "defaultComponentStyle": "sfc"
+  },
+  "aliases": {
+    "commands": {
+      "component": "c"
+    },
+    "options": {
+      "name": "n",
+      "single": "s",
+      "parent": "p",
+      "functional": "f",
+      "test": "t",
+      "help": "h"
+    }
+  }  
+}

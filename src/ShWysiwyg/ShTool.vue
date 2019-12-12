@@ -6,20 +6,23 @@
             @click="handleClick"
             v-html="command.icon"
     />
-    <component :is="command.utils"
-               v-if="shouldShowUtils"
-               @addAdditionalArgs="handleAddAdditionalArgs"
-    />
+    <ShUtils v-if="shouldShowUtils">
+      <component :is="command.utils"
+                 @addAdditionalArgs="handleAddAdditionalArgs"
+      />
+    </ShUtils>
   </div>
 </template>
 
 <script>
+import ShUtils from './ShUtils';
 import CreateLink from './utils/CreateLink';
 
 export default {
   name: 'ShButton',
 
   components: {
+    ShUtils,
     CreateLink,
   },
 
