@@ -1,5 +1,5 @@
 <template>
-  <div class="ShEditor ShEditor__reset"
+  <div class="ShEditor"
        contenteditable="true"
   />
 </template>
