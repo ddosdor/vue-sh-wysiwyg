@@ -2,13 +2,19 @@
   <div class="ShWysiwyg">
     <div class="ShWysiwyg__reset">
       <div class="ShWysiwyg__toolbar">
-        <ShTool v-for="(command, index) in commands"
-                :key="index"
-                :command="command"
-                @execCommand="handleExecCommand"
+        <div v-for="(command, index) in toolbar"
+             :key="index"
         >
-          {{ command.title }}
-        </ShTool>
+          <ShTool v-if="commands[command]"
+                  :command="commands[command]"
+                  @execCommand="handleExecCommand"
+          >
+            {{ command.title }}
+          </ShTool>
+          <span v-else
+                class="toolbar__divider"
+          />
+        </div>
       </div>
       <ShEditor ref="ShEditor" />
     </div>
@@ -39,6 +45,12 @@ export default {
     content: {
       type: String,
       default: '',
+    },
+    toolbar: {
+      type: Array,
+      default: () => [
+        'bold', 'italic', '|', 'justifyLeft', 'justifyCenter', 'justifyRight', '|', 'createLink',
+      ],
     },
   },
 
@@ -144,4 +156,11 @@ export default {
     padding: 2px 8px
     white-space: normal
     line-height: 20px
+
+    .toolbar__divider
+      display: block
+      height: 100%
+      width: 1px
+      background: #d1d1d1
+      margin: 0 2px
 </style>
