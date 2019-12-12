@@ -49,7 +49,8 @@ export default {
     toolbar: {
       type: Array,
       default: () => [
-        'heading', '|', 'bold', 'italic', '|', 'justifyLeft', 'justifyCenter', 'justifyRight', '|', 'createLink', '|', 'removeFormat', 'undo',
+        'heading', '|', 'bold', 'italic', 'underline', 'strikeThrough', '|', 'justifyLeft',
+        'justifyCenter', 'justifyRight', 'justifyFull', '|', 'createLink', '|', 'removeFormat', 'undo',
       ],
     },
   },
