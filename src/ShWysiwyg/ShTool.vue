@@ -17,6 +17,7 @@
 <script>
 import ShUtils from './ShUtils';
 import CreateLink from './utils/CreateLink';
+import Heading from './utils/Heading';
 
 export default {
   name: 'ShButton',
@@ -24,6 +25,7 @@ export default {
   components: {
     ShUtils,
     CreateLink,
+    Heading,
   },
 
   props: {

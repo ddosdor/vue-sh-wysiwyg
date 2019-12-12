@@ -10,4 +10,5 @@
   top: 40px
   border: 1px solid #d1d1d1
   z-index: 1
+  background: #f8f8f8
 </style>

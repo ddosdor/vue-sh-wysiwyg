@@ -49,7 +49,7 @@ export default {
     toolbar: {
       type: Array,
       default: () => [
-        'bold', 'italic', '|', 'justifyLeft', 'justifyCenter', 'justifyRight', '|', 'createLink', '|', 'removeFormat', 'undo',
+        'heading', '|', 'bold', 'italic', '|', 'justifyLeft', 'justifyCenter', 'justifyRight', '|', 'createLink', '|', 'removeFormat', 'undo',
       ],
     },
   },
@@ -144,6 +144,7 @@ export default {
     padding: 2px 8px
     white-space: normal
     line-height: 20px
+    color: #2c3e50
 
     .toolbar__divider
       display: block
