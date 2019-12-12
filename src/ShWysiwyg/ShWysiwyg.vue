@@ -49,7 +49,7 @@ export default {
     toolbar: {
       type: Array,
       default: () => [
-        'bold', 'italic', '|', 'justifyLeft', 'justifyCenter', 'justifyRight', '|', 'createLink',
+        'bold', 'italic', '|', 'justifyLeft', 'justifyCenter', 'justifyRight', '|', 'createLink', '|', 'removeFormat', 'undo',
       ],
     },
   },
@@ -94,19 +94,6 @@ export default {
         }
       }
     },
-    clearSelectedRedion() {
-      this.selectedRegion = null;
-      const selection = window.getSelection();
-
-      if (selection) {
-        if (selection.empty !== undefined) {
-          selection.empty();
-        }
-        if (selection.removeAllRanges !== undefined) {
-          selection.removeAllRanges();
-        }
-      }
-    },
     handleContentFocus() {
       document.execCommand('defaultParagraphSeparator', false, 'div');
       this.$emit('focus');
@@ -125,7 +112,6 @@ export default {
     handleExecCommand(cmd, args) {
       if (args) this.restoreSelectedRegion();
       document.execCommand(cmd, false, args || null);
-      this.clearSelectedRedion();
       this.$nextTick(this.emitChanges);
     },
   },
